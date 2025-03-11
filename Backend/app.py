@@ -13,6 +13,10 @@ app = Flask(__name__)
 #Lets frontend make requests to backend
 CORS(app)  
 
+@app.route("/")
+def home():
+    return "Backend is Running"
+
 @app.route("/upload", methods=["POST"])
 
 def upload_image():
